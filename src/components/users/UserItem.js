@@ -1,14 +1,16 @@
-import "./UserItem.css";
+import Card from "../UI/Card";
+import classes from "./UserItem.module.css";
 
-function UserItem(props) {
-  const userName = "Zoran";
-  const userAge = 58;
+const UserItem = (props) => {
   return (
-    <div className="user-item">
-      <div>{props.name}</div>
-      <div>({props.age} years old)</div>
-    </div>
+    <Card className={classes.users}>
+      <ul className="user-item">
+        <li>
+          {props.name} ({props.age} years old)
+        </li>
+      </ul>
+    </Card>
   );
-}
+};
 
 export default UserItem;

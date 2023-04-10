@@ -1,13 +1,14 @@
 import React from "react";
 import UserItem from "./UserItem";
 
-function Users() {
+const Users = (props) => {
   return (
-    <div>
-      <UserItem name={users[0].name} age={users[0].age} />
-      <UserItem name={users[1].name} age={users[1].age} />
+    <div className="new-users">
+      {props.users.map((user) => (
+        <UserItem key={user.id} name={user.name} age={user.age} />
+      ))}
     </div>
   );
-}
+};
 
 export default Users;
